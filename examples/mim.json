@@ -1,0 +1,41 @@
+{
+  "title": "MIM depeg — headlines vs chain (July 2026)",
+  "context": "Headlines reported MIM depegged ~50%. Reconciling the quoted numbers against the Curve MIM/3CRV pool state and public price feeds.",
+  "claims": [
+    {
+      "label": "MIM price (headline: ~0.50 USD)",
+      "type": "defillama_price",
+      "token": "ethereum:0x99D8a9C45b2eca8864373A26D1459e3Dff1e17F3",
+      "claimed": 0.50,
+      "tolerance_pct": 10
+    },
+    {
+      "label": "MIM in Curve MIM/3CRV pool",
+      "type": "eth_call",
+      "to": "0x99D8a9C45b2eca8864373A26D1459e3Dff1e17F3",
+      "signature": "0x70a08231",
+      "arg_address": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
+      "decimals": 18,
+      "claimed": 4014452,
+      "tolerance_pct": 10
+    },
+    {
+      "label": "3CRV in Curve MIM/3CRV pool",
+      "type": "eth_call",
+      "to": "0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490",
+      "signature": "0x70a08231",
+      "arg_address": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
+      "decimals": 18,
+      "claimed": 12574,
+      "tolerance_pct": 25
+    },
+    {
+      "label": "Abracadabra total TVL (USD)",
+      "type": "defillama_tvl",
+      "protocol": "abracadabra",
+      "claimed": 4400000,
+      "tolerance_pct": 15
+    }
+  ]
+}
+
