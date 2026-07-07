@@ -1,0 +1,33 @@
+{
+  "title": "USDG 'Pendle Effect' — April claims vs July chain state",
+  "context": "In April, public articles cited SY-USDG holding $121M of a $474M supply (25.4% concentration) as proof of DeFi traction. Reconciling those claims against current chain state.",
+  "claims": [
+    {
+      "label": "USDG total supply (April claim: 474M)",
+      "type": "eth_call",
+      "to": "0xe343167631d89B6Ffc58B88d6b7fB0228795491D",
+      "signature": "totalSupply()",
+      "decimals": 6,
+      "claimed": 474000000,
+      "tolerance_pct": 5
+    },
+    {
+      "label": "USDG held by SY-USDG (April claim: 121M)",
+      "type": "eth_call",
+      "to": "0xe343167631d89B6Ffc58B88d6b7fB0228795491D",
+      "signature": "0x70a08231",
+      "arg_address": "0xc1799CAB1F201946f7cFAfbAf1BCC089B2F08927",
+      "decimals": 6,
+      "claimed": 121000000,
+      "tolerance_pct": 5
+    },
+    {
+      "label": "USDG price",
+      "type": "defillama_price",
+      "token": "ethereum:0xe343167631d89B6Ffc58B88d6b7fB0228795491D",
+      "claimed": 1.00,
+      "tolerance_pct": 1
+    }
+  ]
+}
+
