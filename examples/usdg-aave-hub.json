@@ -1,0 +1,35 @@
+{
+  "title": "USDG second act — PT-USDG as inaugural collateral in Aave V4's Global Dollar Hub",
+  "context": "Coverage on July 1-2 2026 said Aave V4's Global Dollar Hub launched with PT-USDG-24SEP2026 as inaugural collateral and ~14.8M supplied shortly after launch. Reconciling the hub's actual PT holdings and related supply figures against chain state.",
+  "claims": [
+    {
+      "label": "PT-USDG-24SEP2026 total supply (July 9 reading: 32.35M)",
+      "type": "eth_call",
+      "to": "0xc1906aecf868749a2dee203f59b904c0cf212140",
+      "signature": "totalSupply()",
+      "decimals": 6,
+      "claimed": 32353702,
+      "tolerance_pct": 10
+    },
+    {
+      "label": "PT-USDG held by Aave V4 hub (launch claim: 14.8M)",
+      "type": "eth_call",
+      "to": "0xc1906aecf868749a2dee203f59b904c0cf212140",
+      "signature": "0x70a08231",
+      "arg_address": "0x62d63197660c080236193CA60b70e49A08e90368",
+      "decimals": 6,
+      "claimed": 14800000,
+      "tolerance_pct": 25
+    },
+    {
+      "label": "USDG mainnet total supply (July 9 reading: 474M)",
+      "type": "eth_call",
+      "to": "0xe343167631d89B6Ffc58B88d6b7fB0228795491D",
+      "signature": "totalSupply()",
+      "decimals": 6,
+      "claimed": 474050930,
+      "tolerance_pct": 15
+    }
+  ]
+}
+
